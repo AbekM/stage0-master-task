@@ -5,46 +5,48 @@ import org.junit.jupiter.api.Test;
 
 class CoordinatePaneTest extends BaseIOTest {
 
-    @Test
-    void printQuadrantFirstWhenXYPositive() {
-        CoordinatePane pane = new CoordinatePane();
+  @Test
+  void printQuadrantFirstWhenXYPositive () {
+    CoordinatePane pane = new CoordinatePane();
 
-        pane.printQuadrant(1, 1);
+    pane.printQuadrant(1, 1);
 
-        assertOutEquals("first\n");
-    }
-    @Test
-    void printQuadrantSecondWhenXPositiveYNegative() {
-        CoordinatePane pane = new CoordinatePane();
+    assertOutEquals("first\n");
+  }
 
-        pane.printQuadrant(-1, 1);
+  @Test
+  void printQuadrantSecondWhenXPositiveYNegative () {
+    CoordinatePane pane = new CoordinatePane();
 
-        assertOutEquals("second\n");
-    }
-    @Test
-    void printQuadrantThirdWhenXYNegative() {
-        CoordinatePane pane = new CoordinatePane();
+    pane.printQuadrant(- 1, 1);
 
-        pane.printQuadrant(-1, -1);
+    assertOutEquals("second\n");
+  }
 
-        assertOutEquals("third\n");
-    }
+  @Test
+  void printQuadrantThirdWhenXYNegative () {
+    CoordinatePane pane = new CoordinatePane();
 
-    @Test
-    void printQuadrantFourthWhenXNegativeYPositive() {
-        CoordinatePane pane = new CoordinatePane();
+    pane.printQuadrant(- 1, - 1);
 
-        pane.printQuadrant(1, -1);
+    assertOutEquals("third\n");
+  }
 
-        assertOutEquals("fourth\n");
-    }
+  @Test
+  void printQuadrantFourthWhenXNegativeYPositive () {
+    CoordinatePane pane = new CoordinatePane();
 
-    @Test
-    void printQuadrantZeroWhenXYZero() {
-        CoordinatePane pane = new CoordinatePane();
+    pane.printQuadrant(1, - 1);
 
-        pane.printQuadrant(0,0);
+    assertOutEquals("fourth\n");
+  }
 
-        assertOutEquals("zero\n");
-    }
+  @Test
+  void printQuadrantZeroWhenXYZero () {
+    CoordinatePane pane = new CoordinatePane();
+
+    pane.printQuadrant(0, 0);
+
+    assertOutEquals("zero\n");
+  }
 }

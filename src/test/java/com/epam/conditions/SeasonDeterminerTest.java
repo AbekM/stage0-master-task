@@ -5,40 +5,40 @@ import org.junit.jupiter.api.Test;
 
 class SeasonDeterminerTest extends BaseIOTest {
 
-    @Test
-    void tellTheSeasonPrintsWinterWhenFebruary() {
-        SeasonDeterminer determiner = new SeasonDeterminer();
+  @Test
+  void tellTheSeasonPrintsWinterWhenFebruary () {
+    SeasonDeterminer determiner = new SeasonDeterminer();
 
-        determiner.tellTheSeason(2);
+    determiner.tellTheSeason(2);
 
-        assertOutEquals("Winter\n");
-    }
+    assertOutEquals("Winter\n");
+  }
 
-    @Test
-    void tellTheSeasonPrintsWinterWhenDecember() {
-        SeasonDeterminer determiner = new SeasonDeterminer();
+  @Test
+  void tellTheSeasonPrintsWinterWhenDecember () {
+    SeasonDeterminer determiner = new SeasonDeterminer();
 
-        determiner.tellTheSeason(12);
+    determiner.tellTheSeason(12);
 
-        assertOutEquals("Winter\n");
-    }
+    assertOutEquals("Winter\n");
+  }
 
-    @Test
-    void tellTheSeasonPrintsSummerWhenJune() {
-        SeasonDeterminer determiner = new SeasonDeterminer();
+  @Test
+  void tellTheSeasonPrintsSummerWhenJune () {
+    SeasonDeterminer determiner = new SeasonDeterminer();
 
-        determiner.tellTheSeason(6);
+    determiner.tellTheSeason(6);
 
-        assertOutEquals("Summer\n");
-    }
+    assertOutEquals("Summer\n");
+  }
 
-    @Test
-    void tellTheSeasonPrintsWrongSeasonWhenZero() {
-        SeasonDeterminer determiner = new SeasonDeterminer();
+  @Test
+  void tellTheSeasonPrintsWrongSeasonWhenZero () {
+    SeasonDeterminer determiner = new SeasonDeterminer();
 
-        determiner.tellTheSeason(0);
+    determiner.tellTheSeason(0);
 
-        assertOutEquals("Wrong month number\n");
-    }
+    assertOutEquals("Wrong month number\n");
+  }
 
 }

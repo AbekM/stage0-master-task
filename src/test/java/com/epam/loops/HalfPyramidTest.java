@@ -5,49 +5,49 @@ import org.junit.jupiter.api.Test;
 
 class HalfPyramidTest extends BaseIOTest {
 
-    @Test
-    void printHalfPyramidEven() {
-        String expected =
-                    "       *\n" +
-                    "      **\n" +
-                    "     ***\n" +
-                    "    ****\n" +
-                    "   *****\n" +
-                    "  ******\n" +
-                    " *******\n" +
-                    "********\n";
+  @Test
+  void printHalfPyramidEven () {
+    String expected =
+        "       *\n" +
+            "      **\n" +
+            "     ***\n" +
+            "    ****\n" +
+            "   *****\n" +
+            "  ******\n" +
+            " *******\n" +
+            "********\n";
 
-                HalfPyramid halfPyramid = new HalfPyramid();
-        halfPyramid.printHalfPyramid(8);
+    HalfPyramid halfPyramid = new HalfPyramid();
+    halfPyramid.printHalfPyramid(8);
 
-        assertOutEquals(expected);
-    }
+    assertOutEquals(expected);
+  }
 
-    @Test
-    void printHalfPyramidOdd() {
-        String expected =
-                    "      *\n" +
-                    "     **\n" +
-                    "    ***\n" +
-                    "   ****\n" +
-                    "  *****\n" +
-                    " ******\n" +
-                    "*******\n";
+  @Test
+  void printHalfPyramidOdd () {
+    String expected =
+        "      *\n" +
+            "     **\n" +
+            "    ***\n" +
+            "   ****\n" +
+            "  *****\n" +
+            " ******\n" +
+            "*******\n";
 
-        HalfPyramid halfPyramid = new HalfPyramid();
+    HalfPyramid halfPyramid = new HalfPyramid();
 
-        halfPyramid.printHalfPyramid(7);
+    halfPyramid.printHalfPyramid(7);
 
-        assertOutEquals(expected);
-    }
+    assertOutEquals(expected);
+  }
 
-    @Test
-    void printHalfPyramidPrintsNothing() {
+  @Test
+  void printHalfPyramidPrintsNothing () {
 
-        HalfPyramid halfPyramid = new HalfPyramid();
+    HalfPyramid halfPyramid = new HalfPyramid();
 
-        halfPyramid.printHalfPyramid(0);
+    halfPyramid.printHalfPyramid(0);
 
-        assertOutEquals("");
-    }
+    assertOutEquals("");
+  }
 }
